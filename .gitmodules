@@ -1,0 +1,6 @@
+[submodule "apps/ios"]
+	path = apps/ios
+	url = https://github.com/Eors583/ios-native-IM-ai.git
+[submodule "apps/android"]
+	path = apps/android
+	url = https://github.com/Eors583/android-native-IM-ai.git
