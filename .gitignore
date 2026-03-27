@@ -35,7 +35,27 @@ node_modules/
 
 # iOS / Xcode
 **/DerivedData/
+**/.build/
+**/build/
+**/xcuserdata/
 **/*.xcuserstate
 **/*.xcworkspace/xcuserdata/
 **/*.xcodeproj/xcuserdata/
 
+# CocoaPods
+**/Pods/
+**/Podfile.lock
+
+# SwiftPM (when used in Xcode projects)
+**/Package.resolved
+
+# MNN iOS 推理库（本地构建产物，体积大）
+apps/ios/IM-AI/Frameworks/MNN.framework/
+
+# Xcode archives / dSYMs
+**/*.xcarchive/
+**/*.dSYM/
+**/*.dSYM.zip
+
+
+apps/ios/IM-AI/Frameworks/MNN.xcframework/
