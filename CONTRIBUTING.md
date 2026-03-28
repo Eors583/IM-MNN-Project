@@ -1,23 +1,24 @@
 # 贡献指南（母仓 / 项目集群）
 
-本仓库是“母仓”（聚合仓）。业务代码主要在 `apps/android`、`apps/ios` 子仓中完成。
+本仓库是“母仓”（聚合仓）。业务代码主要在 `apps/android`、`apps/ios`、`apps/flutter` 子仓中完成。
 
 ## 1. 你应该改哪里
 
 - **改 Android**：进入 `apps/android`（子仓）提交代码
 - **改 iOS**：进入 `apps/ios`（子仓）提交代码
+- **改 Flutter**：进入 `apps/flutter`（子仓）提交代码
 - **改跨端约定/文档/脚本/CI**：改母仓根目录（如 `docs/`、`scripts/`、根 `README.md`）
 
 ## 2. Submodule 的工作方式（必须理解）
 
-- 母仓里 `apps/android`、`apps/ios` 只是“指针”（记录子仓当前指向的 commit）
+- 母仓里 `apps/android`、`apps/ios`、`apps/flutter` 只是“指针”（记录子仓当前指向的 commit）
 - 因此一次完整的跨端改动，通常会产生：
   - 子仓自己的 commit（在子仓远端）
   - 母仓的一个 commit（更新 submodule 指针到新的子仓 commit）
 
 ## 3. 推荐开发流程
 
-### 3.1 修改子仓（Android/iOS）
+### 3.1 修改子仓（Android / iOS / Flutter）
 
 1. 进入子仓目录（如 `apps/android`）
 2. 正常开发、提交、推送到子仓远端

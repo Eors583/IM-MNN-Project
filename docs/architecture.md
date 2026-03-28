@@ -13,6 +13,9 @@
   - 目标与 Android 对齐：相同的局域网 IM +（可选）AI 能力
   - 当前处于从 Android 方案迁移/对齐阶段（先把协议与产品能力拉齐）
 
+- **Flutter App（apps/flutter）**
+  - 同一产品的 Flutter 多端实现；与 Android / iOS 在协议与能力上对齐（以 `docs/protocol.md` 为准）
+
 - **PC AI 桥（apps/android/tools/pc-ai-server）**
   - 一个可选组件：让手机把对话“接到 PC 上的 LLM”（Ollama 或 OpenAI 兼容接口）
   - 与 App 使用相同的 TCP+JSON 行协议，连接后对 `text` 消息生成回复再写回

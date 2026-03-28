@@ -4,3 +4,6 @@
 [submodule "apps/android"]
 	path = apps/android
 	url = https://github.com/Eors583/android-native-IM-ai.git
+[submodule "apps/flutter"]
+	path = apps/flutter
+	url = https://github.com/Eors583/flutter-native-IM-ai.git

@@ -1,6 +1,6 @@
 # IM-MNN-Project
 
-一个“母仓库 / 项目集群”示例：用 **Git Submodule** 聚合多端同一产品的实现（Android / iOS），并附带 PC 端 AI 聊天桥接服务（位于 Android 子仓的 `tools/pc-ai-server`）。
+一个“母仓库 / 项目集群”示例：用 **Git Submodule** 聚合多端同一产品的实现（Android / iOS / Flutter），并附带 PC 端 AI 聊天桥接服务（位于 Android 子仓的 `tools/pc-ai-server`）。
 
 ## 这是什么
 
@@ -13,7 +13,8 @@
 .
 ├─ apps/
 │  ├─ android/        # Android 原生实现（Kotlin + Compose）
-│  └─ ios/            # iOS 原生实现（准备从 Android 方案迁移/对齐）
+│  ├─ ios/            # iOS 原生实现（与 Android 协议/能力对齐）
+│  └─ flutter/        # Flutter 多端实现（Dart）
 ├─ docs/              # 跨端约定（协议/架构/协作）
 ├─ scripts/           # 一键初始化、同步 submodule 等脚本
 └─ .github/workflows/ #（可选）CI：校验 submodule、跑基础构建/检查
@@ -56,10 +57,11 @@ git submodule update --init --recursive
 
 - **Android**：见 `apps/android/README.md`
 - **iOS**：见 `apps/ios/README.md`（目前文档已对齐产品说明，代码迁移进行中）
+- **Flutter**：见 `apps/flutter/README.md`
 
 ## 跨端协议（重要）
 
-三端（Android <-> Android、Android <-> PC AI 桥、未来 iOS）建议统一遵循：
+各端（Android / iOS / Flutter 互通、Android <-> PC AI 桥等）建议统一遵循：
 
 - **传输**：TCP
 - **编码**：UTF-8
@@ -70,7 +72,7 @@ git submodule update --init --recursive
 
 ## 协作约定（建议）
 
-- **改动子仓**：在 `apps/android` / `apps/ios` 内各自开发、提交、推送到子仓远端
+- **改动子仓**：在 `apps/android` / `apps/ios` / `apps/flutter` 内各自开发、提交、推送到子仓远端
 - **更新母仓指针**：回到母仓提交 submodule 指针更新（母仓只记录子仓 commit）
 - **PR/发版**：母仓 PR 中说明本次包含的 Android/iOS 子仓 commit / tag
 
